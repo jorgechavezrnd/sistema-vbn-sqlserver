@@ -20,8 +20,24 @@
         End Try
     End Sub
 
+    Private Sub Buscar()
+        Try
+            Dim Neg As New Negocio.NCategoria
+            Dim Valor As String
+            Valor = TxtValor.Text
+            DgvListado.DataSource = Neg.Buscar(Valor)
+            LblTotal.Text = "Total Registros: " & DgvListado.DataSource.Rows.Count
+            Me.Formato()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
     Private Sub FrmCategoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.Listar()
     End Sub
 
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        Me.Buscar()
+    End Sub
 End Class
