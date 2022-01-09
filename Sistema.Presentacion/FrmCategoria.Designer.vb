@@ -40,6 +40,10 @@ Partial Class FrmCategoria
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ErrorIcono = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.BtnActualizar = New System.Windows.Forms.Button()
+        Me.ChkSeleccionar = New System.Windows.Forms.CheckBox()
+        Me.BtnEliminar = New System.Windows.Forms.Button()
+        Me.BtnActivar = New System.Windows.Forms.Button()
+        Me.BtnDesactivar = New System.Windows.Forms.Button()
         Me.TabGeneral.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DgvListado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,6 +63,10 @@ Partial Class FrmCategoria
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.BtnDesactivar)
+        Me.TabPage1.Controls.Add(Me.BtnActivar)
+        Me.TabPage1.Controls.Add(Me.BtnEliminar)
+        Me.TabPage1.Controls.Add(Me.ChkSeleccionar)
         Me.TabPage1.Controls.Add(Me.BtnBuscar)
         Me.TabPage1.Controls.Add(Me.TxtValor)
         Me.TabPage1.Controls.Add(Me.LblTotal)
@@ -206,6 +214,43 @@ Partial Class FrmCategoria
         Me.BtnActualizar.Text = "Actualizar"
         Me.BtnActualizar.UseVisualStyleBackColor = True
         '
+        'ChkSeleccionar
+        '
+        Me.ChkSeleccionar.AutoSize = True
+        Me.ChkSeleccionar.Location = New System.Drawing.Point(29, 382)
+        Me.ChkSeleccionar.Name = "ChkSeleccionar"
+        Me.ChkSeleccionar.Size = New System.Drawing.Size(82, 17)
+        Me.ChkSeleccionar.TabIndex = 4
+        Me.ChkSeleccionar.Text = "Seleccionar"
+        Me.ChkSeleccionar.UseVisualStyleBackColor = True
+        '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Location = New System.Drawing.Point(142, 378)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(113, 23)
+        Me.BtnEliminar.TabIndex = 5
+        Me.BtnEliminar.Text = "Eliminar"
+        Me.BtnEliminar.UseVisualStyleBackColor = True
+        '
+        'BtnActivar
+        '
+        Me.BtnActivar.Location = New System.Drawing.Point(279, 378)
+        Me.BtnActivar.Name = "BtnActivar"
+        Me.BtnActivar.Size = New System.Drawing.Size(113, 23)
+        Me.BtnActivar.TabIndex = 6
+        Me.BtnActivar.Text = "Activar"
+        Me.BtnActivar.UseVisualStyleBackColor = True
+        '
+        'BtnDesactivar
+        '
+        Me.BtnDesactivar.Location = New System.Drawing.Point(416, 378)
+        Me.BtnDesactivar.Name = "BtnDesactivar"
+        Me.BtnDesactivar.Size = New System.Drawing.Size(113, 23)
+        Me.BtnDesactivar.TabIndex = 7
+        Me.BtnDesactivar.Text = "Desactivar"
+        Me.BtnDesactivar.UseVisualStyleBackColor = True
+        '
         'FrmCategoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -243,4 +288,8 @@ Partial Class FrmCategoria
     Friend WithEvents TxtId As TextBox
     Friend WithEvents ErrorIcono As ErrorProvider
     Friend WithEvents BtnActualizar As Button
+    Friend WithEvents BtnDesactivar As Button
+    Friend WithEvents BtnActivar As Button
+    Friend WithEvents BtnEliminar As Button
+    Friend WithEvents ChkSeleccionar As CheckBox
 End Class
